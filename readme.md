@@ -24,7 +24,7 @@ disclaimer: just some tools!
 
 ## howto
 
-1. clone this repo to your (windows) PC
+1. clone this repo to your (windows) PC: `git clone https://github.com/RVirmoors/iml-0423 --recursive`
 2. open/run each file/script as instructed
 
 see the video recording for details
@@ -60,7 +60,9 @@ open a terminal in `stylegan3/` and run `python gan.py`
 ## gpt
 
 - source: https://github.com/nomic-ai/gpt4all
-- source: https://youtu.be/eztLFYkJqz8 (text-to-speech)
+- source: https://voicerss.org/sdk/python.aspx (text-to-speech)
+
+create a `configuration.yaml` file and add your VoiceRSS API key
 
 follow the instructions to download the model .bin file into `gpt4all/chat/`
 
@@ -69,7 +71,7 @@ open a terminal in `gpt-tts` and run:
 ```
 python -m venv venv
 venv/Scripts/activate.bat
-pip install pyllamacpp python-osc
+pip install pyllamacpp python-osc ffmpeg pyyaml
 pyllamacpp-convert-gpt4all ..\gpt4all\chat\gpt4all-lora-quantized.bin .\tokenizer.model ..\gpt4all\chat\gpt4all-lora-converted.bin
 ```
 

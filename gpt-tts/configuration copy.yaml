@@ -1,0 +1,7 @@
+api_key: YOUR_API_KEY
+language: en-gb
+codec: aac
+format: '44khz_16bit_mono'
+speed: '0'
+voice: Nancy
+delay: 0
