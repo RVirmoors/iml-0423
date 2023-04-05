@@ -23,7 +23,7 @@ from pythonosc.osc_server import BlockingOSCUDPServer
 
 def get_psi(address, *args):
     global psi
-    print("PSI:", args[0])
+    # print("PSI:", args[0])
     psi = args[0]
 
 def get_z(address, *args):
