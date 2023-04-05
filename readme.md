@@ -69,7 +69,7 @@ open a terminal in `gpt-tts` and run:
 ```
 python -m venv venv
 venv/Scripts/activate.bat
-pip install pyllamacpp
+pip install pyllamacpp python-osc
 pyllamacpp-convert-gpt4all ..\gpt4all\chat\gpt4all-lora-quantized.bin .\tokenizer.model ..\gpt4all\chat\gpt4all-lora-converted.bin
 ```
 
