@@ -5,6 +5,8 @@
 ethics
 - [76 reasonable questions](https://76questions.neocities.org/)
 
+---
+
 disclaimer: just some tools!
 - no slides[*](https://rvirmoors.github.io/ccia/slides/intro-ml-workshop)[*](https://rvirmoors.github.io/ccia/slides/stylegan-workshop)
 - no coding (i hope!)
@@ -32,14 +34,14 @@ see the video recording for details
 - requires: [Max 8](https://cycling74.com/downloads)
 - source: https://github.com/yuichkun/n4m-posenet
 
-open `cc1/ml/posenet/hands.maxpat`
+open `posenet/hands.maxpat`
 
 ## rave
 
 - requires: Max 8
 - source: https://github.com/acids-ircam/nn_tilde
 
-open `cc1/ml/nn-rave/blabber.maxpat`
+open `nn-rave/blabber.maxpat`
 
 ## stylegan
 
@@ -47,12 +49,13 @@ open `cc1/ml/nn-rave/blabber.maxpat`
 - requires: Python 3.9 64bit
 - requires: NVidia GPU w/ CUDA drivers
 - source: https://github.com/PDillis/stylegan3-fun
+- source: https://github.com/marenz2569/Spout-for-Python
 
 [install](stylegan3/startup.txt) StyleGAN3 and trained models
 
-open `cc1/ml/stylegan3/pose-gan.maxpat`
+open `stylegan3/pose-gan.maxpat`
 
-open a terminal in `cc1/ml/stylegan3` and run `python gan.py`
+open a terminal in `stylegan3/` and run `python gan.py`
 
 ## gpt
 

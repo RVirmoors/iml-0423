@@ -1,3 +1,6 @@
 [submodule "gpt4all"]
 	path = gpt4all
 	url = https://github.com/nomic-ai/gpt4all.git
+[submodule "stylegan3/stylegan3-fun"]
+	path = stylegan3/stylegan3-fun
+	url = https://github.com/PDillis/stylegan3-fun
