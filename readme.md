@@ -1,6 +1,6 @@
-# iML Art 04.2023 // [bit.ly/ml-0423](https://bit.ly/ml-0423)
+# iML Art 04.2023 // [bit.ly/iml0423](https://bit.ly/iml0423)
 
-[Grigore Burloiu](https://cinetic.arts.ro/en/echipa/grigore-burloiu/) . [web](https://rvirmoors.github.io/) . [ITPMA](https://itpma.notion.site/)
+[Grigore Burloiu](https://cinetic.arts.ro/en/echipa/grigore-burloiu/) . [rvirmoors](https://rvirmoors.github.io/) . [ITPMA](https://itpma.notion.site/)
 
 ethics
 - [76 reasonable questions](https://76questions.neocities.org/)
