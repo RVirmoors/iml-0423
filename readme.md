@@ -62,6 +62,17 @@ open a terminal in `stylegan3/` and run `python gan.py`
 - source: https://github.com/nomic-ai/gpt4all
 - source: https://youtu.be/eztLFYkJqz8 (text-to-speech)
 
+follow the instructions to download the model .bin file into `gpt4all/chat/`
+
+open a terminal in `gpt-tts` and run:
+
+```
+python -m venv venv
+venv/Scripts/activate.bat
+pip install pyllamacpp
+pyllamacpp-convert-gpt4all ..\gpt4all\chat\gpt4all-lora-quantized.bin .\tokenizer.model ..\gpt4all\chat\gpt4all-lora-converted.bin
+```
+
 ## stablediffusion
 
 - source: https://github.com/Stability-AI/StableDiffusion
