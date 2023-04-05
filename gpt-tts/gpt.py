@@ -4,10 +4,37 @@ from pythonosc.osc_server import BlockingOSCUDPServer
 from pythonosc.udp_client import SimpleUDPClient
 from random import random
 
+import yaml
+import voicerss_tts
+import wave
+
+with open('configuration.yaml', 'r') as f:
+    config = yaml.load(f, Loader=yaml.FullLoader)
+
 ip = "127.0.0.1"
 in_port = 1337
 out_port = 12000
 client = SimpleUDPClient(ip, out_port)  # Create client
+
+def say(what):
+    voice = voicerss_tts.speech({
+        'key': config['api_key'],
+        'hl': config['language'],
+        'v': config['voice'],
+        'src': what,
+        'r': config['speed'],
+        'c': config['codec'],
+        'f': config['format'],
+        'ssml': 'false',
+        'b64': 'false'
+    })
+
+    with wave.open('output.wav', 'wb') as wav_file:
+        wav_file.setnchannels(1)  # mono
+        wav_file.setsampwidth(2)  # 2 bytes per sample
+        wav_file.setframerate(44100)
+        wav_file.writeframes(voice['response'])
+
 
 def prompt_handler(address, *args):
     width = args[0]
@@ -28,6 +55,7 @@ def prompt_handler(address, *args):
         nlines = haiku.count('\n')
 
     print("HAIKU: ", haiku.lstrip())
+    say(haiku.lstrip())
     client.send_message("/haiku", haiku.lstrip())
 
 
