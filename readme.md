@@ -14,7 +14,7 @@ disclaimer: just some tools!
 - no art
 
 extra disclaimer: these tools are _fast_
-- but installing them takes TIME and SPACE
+<br/>... but installing them takes TIME and SPACE
 
 0. [How to use this repo](#howto)
 1. pose in: [PoseNet](#posenet)
