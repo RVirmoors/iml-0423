@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 343.0, 244.0, 1165.0, 480.0 ],
+		"rect" : [ 426.0, 155.0, 1165.0, 702.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,11 +40,74 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-34",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 842.0, 56.0, 88.0, 22.0 ],
+					"text" : "prepend /haiku"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-33",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 842.0, 91.0, 135.0, 22.0 ],
+					"text" : "udpsend localhost 6448"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-32",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 646.0, 219.5, 119.0, 22.0 ],
+					"text" : "metro 500 @active 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-31",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 646.0, 247.5, 88.0, 22.0 ],
+					"text" : "read haiku.png"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"autofit" : 1,
+					"forceaspect" : 1,
+					"id" : "obj-10",
+					"maxclass" : "fpic",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "jit_matrix" ],
+					"patching_rect" : [ 646.0, 278.5, 338.0, 338.0 ],
+					"pic" : "haiku.png",
+					"presentation" : 1,
+					"presentation_rect" : [ 665.0, 143.5, 338.0, 338.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-30",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1071.0, 232.0, 45.0, 22.0 ],
+					"patching_rect" : [ 1052.0, 130.0, 45.0, 22.0 ],
 					"text" : "s done"
 				}
 
@@ -127,7 +190,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1009.0, 232.0, 48.0, 22.0 ],
+					"patching_rect" : [ 990.0, 130.0, 48.0, 22.0 ],
 					"text" : "s ready"
 				}
 
@@ -201,6 +264,8 @@
 					"outlettype" : [ "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
 					"patching_rect" : [ 307.0, 312.0, 136.0, 41.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 343.0, 148.0, 136.0, 41.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.gain~",
@@ -250,7 +315,10 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 665.0, 224.0, 338.0, 77.0 ],
+					"patching_rect" : [ 646.0, 122.0, 338.0, 77.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 3,
+					"presentation_rect" : [ 665.0, 47.0, 338.0, 77.0 ],
 					"text" : "\"Fat baboon,\nSo full of himself,\nHe can't even sit down!\""
 				}
 
@@ -262,7 +330,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 1009.0, 193.0, 107.0, 22.0 ],
+					"patching_rect" : [ 990.0, 91.0, 107.0, 22.0 ],
 					"text" : "route /haiku /again"
 				}
 
@@ -274,7 +342,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1009.0, 153.0, 104.0, 22.0 ],
+					"patching_rect" : [ 990.0, 51.0, 104.0, 22.0 ],
 					"text" : "udpreceive 12000"
 				}
 
@@ -287,6 +355,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 54.0, 291.0, 135.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 343.0, 113.0, 135.0, 22.0 ],
 					"text" : "269.404987 109.5635"
 				}
 
@@ -437,6 +507,27 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-31", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-31", 0 ],
+					"source" : [ "obj-32", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-33", 0 ],
+					"source" : [ "obj-34", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-4", 0 ]
 				}
@@ -466,6 +557,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-34", 0 ],
+					"order" : 2,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-8", 1 ],
 					"order" : 1,
 					"source" : [ "obj-6", 0 ]
@@ -476,6 +575,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-29", 1 ],
 					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-34", 0 ],
+					"source" : [ "obj-8", 0 ]
 				}
 
 			}
@@ -508,7 +614,14 @@
 			"inherited_shortname" : 1
 		}
 ,
-		"dependency_cache" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "haiku.png",
+				"bootpath" : "E:/GitHub/iml-0423/gpt-tts",
+				"patcherrelativepath" : ".",
+				"type" : "PNG",
+				"implicit" : 1
+			}
+ ],
 		"autosave" : 0
 	}
 

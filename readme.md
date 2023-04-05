@@ -86,10 +86,7 @@ open `gpt-tts/haiku.maxpat`
 ## stablediffusion
 
 - requires: Python 3.9 64bit
-- source: https://github.com/Stability-AI/StableDiffusion
-- source: https://github.com/CompVis/stable-diffusion
-
-follow the [instructions](https://github.com/Stability-AI/StableDiffusion#stable-diffusion-v2) and download weights (i used [this ckpt](https://huggingface.co/stabilityai/stable-diffusion-2-1/blob/main/v2-1_768-ema-pruned.ckpt))
+- source: https://huggingface.co/stabilityai/stable-diffusion-2-1
 
 again create a venv, install packages, and run the script:
 
@@ -98,8 +95,8 @@ cd stable
 python -m venv venv
 venv/Scripts/activate.bat
 pip install light-the-torch
-ltt install torch torchvision pytorch_lightning==1.7.7
-pip install python-osc opencv-python omegaconf pillow tqdm einops invisible-watermark kornia transformers open_clip_torch
+ltt install torch
+pip install diffusers transformers accelerate scipy safetensors
 python stable.py
 ```
 
