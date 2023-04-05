@@ -4,3 +4,6 @@
 [submodule "stylegan3/stylegan3-fun"]
 	path = stylegan3/stylegan3-fun
 	url = https://github.com/PDillis/stylegan3-fun
+[submodule "StableDiffusion"]
+	path = StableDiffusion
+	url = https://github.com/Stability-AI/StableDiffusion

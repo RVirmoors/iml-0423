@@ -72,3 +72,4 @@ Lib/
 __pycache__/
 stylegan3/shape_predictor_68_face_landmarks.dat
 configuration.yaml
+*.ckpt

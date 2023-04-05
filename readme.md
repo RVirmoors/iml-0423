@@ -13,6 +13,9 @@ disclaimer: just some tools!
 - no math (almost)
 - no art
 
+extra disclaimer: these tools are _fast_
+- but installing them takes TIME and SPACE
+
 0. [How to use this repo](#howto)
 1. pose in: [PoseNet](#posenet)
 2. audio gen out: [RAVE](#rave)
@@ -59,12 +62,14 @@ open a terminal in `stylegan3/` and run `python gan.py`
 
 ## gpt
 
+- requires: Max 8
+- requires: Python 3.9 64bit
 - source: https://github.com/nomic-ai/gpt4all
 - source: https://voicerss.org/sdk/python.aspx (text-to-speech)
 
-create a `configuration.yaml` file and add your VoiceRSS API key
+edit `configuration copy.yaml` with your [VoiceRSS API key](https://voicerss.org/registration.aspx) and save it as `configuration.yaml`
 
-follow the instructions to download the model .bin file into `gpt4all/chat/`
+follow the [instructions](https://github.com/nomic-ai/gpt4all) to download the model .bin file into `gpt4all/chat/`
 
 open a terminal in `gpt-tts` and run:
 
@@ -73,12 +78,29 @@ python -m venv venv
 venv/Scripts/activate.bat
 pip install pyllamacpp python-osc ffmpeg pyyaml
 pyllamacpp-convert-gpt4all ..\gpt4all\chat\gpt4all-lora-quantized.bin .\tokenizer.model ..\gpt4all\chat\gpt4all-lora-converted.bin
+python gpt.py
 ```
+
+open `gpt-tts/haiku.maxpat`
 
 ## stablediffusion
 
+- requires: Python 3.9 64bit
 - source: https://github.com/Stability-AI/StableDiffusion
 - source: https://github.com/CompVis/stable-diffusion
 
+follow the [instructions](https://github.com/Stability-AI/StableDiffusion#stable-diffusion-v2) and download weights (i used [this ckpt](https://huggingface.co/stabilityai/stable-diffusion-2-1/blob/main/v2-1_768-ema-pruned.ckpt))
+
+again create a venv, install packages, and run the script:
+
+```
+cd stable
+python -m venv venv
+venv/Scripts/activate.bat
+pip install light-the-torch
+ltt install torch torchvision pytorch_lightning==1.7.7
+pip install python-osc opencv-python omegaconf pillow tqdm einops invisible-watermark kornia transformers open_clip_torch
+python stable.py
+```
 
 stable diffusion with stylegan-like interpolation? [why not](https://sites.google.com/view/stylegan-t/)

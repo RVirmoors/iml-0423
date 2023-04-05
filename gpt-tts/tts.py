@@ -9,7 +9,7 @@ voice = voicerss_tts.speech({
     'key': config['api_key'],
     'hl': config['language'],
     'v': config['voice'],
-    'src': 'Hello, world!',
+    'src': 'a',
     'r': config['speed'],
     'c': config['codec'],
     'f': config['format'],
@@ -19,7 +19,7 @@ voice = voicerss_tts.speech({
 
 print('starting')
 
-with wave.open('output.wav', 'wb') as wav_file:
+with wave.open('empty.wav', 'wb') as wav_file:
     wav_file.setnchannels(1)  # mono
     wav_file.setsampwidth(2)  # 2 bytes per sample
     wav_file.setframerate(44100)

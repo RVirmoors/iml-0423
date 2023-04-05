@@ -41,22 +41,44 @@ def prompt_handler(address, *args):
     height = args[1]
     thing = "any one thing" if random() < 0.5 else "an animal"
     if width > height:
-        prompt = "Name " + thing + " that is around " + str(width) + " cm wide."
+        if width > 300:
+            howbig = "immensely wide"
+        elif width > 200:
+            howbig = "very wide"
+        elif width > 122:
+            howbig = "as wide as a door"
+        elif width > 50:
+            howbig = "slender"
+        else:
+            howbig = "very small"
+        prompt = "Name " + thing + " that is " + howbig + " and write a haiku about it."
     else:
-        prompt = "Name " + thing + " that is very tall and write a haiku about it." # around " + str(height) + " cm tall."
-    print(prompt)
-    nlines = 0
-    haiku = ''
-    while nlines < 3:
-        generated_text = model.generate(prompt, n_predict=100)
-        print("AAA ", generated_text)
-        haiku = " ".join(generated_text.split(".")[1:])
-        print("BBB ", haiku)
-        nlines = haiku.count('\n')
+        if height > 300:
+            howbig = "hugely tall"
+        elif height > 200:
+            howbig = "very tall"
+        elif height > 122:
+            howbig = "as tall as a person"
+        elif height > 50:
+            howbig = "smaller than a person"
+        else:
+            howbig = "very small"
+        prompt = "Name " + thing + " that is " + howbig + " and write a haiku about it."
+    print("PROMPT:", prompt)
 
-    print("HAIKU: ", haiku.lstrip())
-    say(haiku.lstrip())
-    client.send_message("/haiku", haiku.lstrip())
+    generated_text = model.generate(prompt, n_predict=100)
+    # print("AAA ", generated_text)
+    haiku = " ".join(generated_text.split(".")[1:])
+    # print("BBB ", haiku)
+    nlines = haiku.count('\n')
+
+    if nlines < 3:
+        client.send_message("/again", 0)
+        return
+    else:
+        print("HAIKU:", haiku.lstrip())
+        say(haiku.lstrip())
+        client.send_message("/haiku", haiku.lstrip())
 
 
 dispatcher = Dispatcher()
