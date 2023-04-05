@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 426.0, 155.0, 1165.0, 702.0 ],
+		"rect" : [ 357.0, 123.0, 1165.0, 702.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,20 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-38",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1058.0, 180.0, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 389.0, 47.0, 43.0, 43.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-34",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -68,7 +82,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 646.0, 219.5, 119.0, 22.0 ],
+					"patching_rect" : [ 646.0, 305.0, 119.0, 22.0 ],
 					"text" : "metro 500 @active 1"
 				}
 
@@ -80,7 +94,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 646.0, 247.5, 88.0, 22.0 ],
+					"patching_rect" : [ 646.0, 333.0, 88.0, 22.0 ],
 					"text" : "read haiku.png"
 				}
 
@@ -94,10 +108,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 646.0, 278.5, 338.0, 338.0 ],
+					"patching_rect" : [ 646.0, 361.0, 338.0, 338.0 ],
 					"pic" : "haiku.png",
 					"presentation" : 1,
-					"presentation_rect" : [ 665.0, 143.5, 338.0, 338.0 ]
+					"presentation_rect" : [ 665.0, 258.5, 338.0, 338.0 ]
 				}
 
 			}
@@ -107,7 +121,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1052.0, 130.0, 45.0, 22.0 ],
+					"patching_rect" : [ 1058.0, 236.0, 45.0, 22.0 ],
 					"text" : "s done"
 				}
 
@@ -209,17 +223,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-22",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 482.0, 340.0, 45.0, 22.0 ],
-					"text" : "s done"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-20",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -227,18 +230,6 @@
 					"outlettype" : [ "int", "empty.wav" ],
 					"patching_rect" : [ 269.0, 162.0, 82.0, 22.0 ],
 					"text" : "t 0 empty.wav"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-15",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 482.0, 305.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -310,16 +301,16 @@
 				"box" : 				{
 					"fontsize" : 20.0,
 					"id" : "obj-8",
-					"linecount" : 3,
+					"linecount" : 7,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 646.0, 122.0, 338.0, 77.0 ],
+					"patching_rect" : [ 646.0, 122.0, 338.0, 169.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 3,
-					"presentation_rect" : [ 665.0, 47.0, 338.0, 77.0 ],
-					"text" : "\"Fat baboon,\nSo full of himself,\nHe can't even sit down!\""
+					"presentation_linecount" : 7,
+					"presentation_rect" : [ 665.0, 47.0, 338.0, 169.0 ],
+					"text" : "\"A river, flowing through a valley,\nWide and meandering like the Milky Way;\nThe trees on its banks, tall and proud,\nLike guardians of this wild journey \n-- Subashree Panda\""
 				}
 
 			}
@@ -357,7 +348,7 @@
 					"patching_rect" : [ 54.0, 291.0, 135.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 343.0, 113.0, 135.0, 22.0 ],
-					"text" : "269.404987 109.5635"
+					"text" : "259.474339 83.194099"
 				}
 
 			}
@@ -418,13 +409,6 @@
 					"destination" : [ "obj-13", 0 ],
 					"order" : 1,
 					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
-					"source" : [ "obj-15", 0 ]
 				}
 
 			}
@@ -528,6 +512,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
+					"source" : [ "obj-38", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-4", 0 ]
 				}
@@ -550,16 +541,16 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-30", 0 ],
-					"source" : [ "obj-6", 1 ]
+					"destination" : [ "obj-34", 0 ],
+					"order" : 2,
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-34", 0 ],
-					"order" : 2,
-					"source" : [ "obj-6", 0 ]
+					"destination" : [ "obj-38", 0 ],
+					"source" : [ "obj-6", 1 ]
 				}
 
 			}
@@ -589,13 +580,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
 					"source" : [ "obj-9", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
-					"source" : [ "obj-9", 1 ]
 				}
 
 			}

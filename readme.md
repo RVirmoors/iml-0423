@@ -71,7 +71,7 @@ edit `configuration copy.yaml` with your [VoiceRSS API key](https://voicerss.org
 
 follow the [instructions](https://github.com/nomic-ai/gpt4all) to download the model .bin file into `gpt4all/chat/`
 
-open a terminal in `gpt-tts` and run:
+open a terminal in `gpt-tts/` and run:
 
 ```
 python -m venv venv
