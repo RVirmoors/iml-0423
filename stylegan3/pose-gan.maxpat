@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 3,
-			"revision" : 1,
+			"minor" : 5,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, -1003.0, 1534.0, 969.0 ],
+		"rect" : [ 463.0, 312.0, 813.0, 446.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -173,7 +173,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 502.833323657512665, 22.333333849906921, 18.0, 34.0 ],
 					"size" : 2,
-					"value" : 1
+					"value" : 0
 				}
 
 			}
@@ -480,19 +480,6 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 827.5, 216.000002562999725, 148.5, 105.0 ],
 					"text" : "fluid.mlpregressor~ @hiddenlayers 3 @activation 1 @outputactivation 1 @batchsize 1 @maxiter 10000 @learnrate 0.1 @validation 0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Lato",
-					"fontsize" : 18.0,
-					"id" : "obj-45",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 599.0, 53.000002562999725, 100.0, 28.0 ],
-					"text" : "Regression"
 				}
 
 			}
@@ -956,11 +943,15 @@
 				"type" : "mx64"
 			}
 , 			{
-				"name" : "fluid.libmanipulation.mxe64",
+				"name" : "fluid.dataset~.mxe64",
 				"type" : "mx64"
 			}
 , 			{
 				"name" : "fluid.list2buf.mxe64",
+				"type" : "mx64"
+			}
+, 			{
+				"name" : "fluid.mlpregressor~.mxe64",
 				"type" : "mx64"
 			}
  ],
