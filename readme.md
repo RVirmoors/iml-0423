@@ -30,7 +30,7 @@ extra disclaimer: these tools are _fast_
 1. clone this repo to your (windows) PC: `git clone https://github.com/RVirmoors/iml-0423 --recursive`
 2. open/run each file/script as instructed
 
-see the video recording for details
+see the [video recording](https://youtu.be/t4FbknvszHU) for details
 
 ## posenet
 
